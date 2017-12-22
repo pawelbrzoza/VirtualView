@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/VirtualView.unity
+  isLoaded: 1
+  isActive: 1
