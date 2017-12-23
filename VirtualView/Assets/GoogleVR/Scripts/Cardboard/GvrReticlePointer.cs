@@ -128,7 +128,7 @@ public class GvrReticlePointer : GvrBasePointer {
 
   protected override void Start() {
     base.Start();
-
+	
     Renderer rendererComponent = GetComponent<Renderer>();
     rendererComponent.sortingOrder = reticleSortingOrder;
 
