@@ -1,10 +1,11 @@
 [Ll]ibrary/
-[Li]brary/metadata
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+VirtualView\Library\metadata*
+VirtualView\ShaderCache*
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -35,5 +36,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.log
-VirtualView/Library/shadercompiler-UnityShaderCompiler.exe0.log
-VirtualView/Library/shadercompiler-UnityShaderCompiler.exe0.log
+VirtualView/Library/metadata/*
