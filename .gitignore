@@ -4,6 +4,8 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+VirtualView/Library/metadata/*
+VirtualView/Library/ShaderCache/*
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -34,6 +36,3 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.log
-VirtualView/Library/metadata/*
-*.log
-VirtualView/Library/ShaderCache/*
