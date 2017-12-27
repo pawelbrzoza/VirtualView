@@ -3,9 +3,9 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
-Assets/AssetStoreTools*
-VirtualView/Library/metadata/*
-VirtualView/Library/ShaderCache/*
+# Assets/AssetStoreTools*
+# VirtualView/Library/metadata/*
+# VirtualView/Library/ShaderCache/*
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -26,8 +26,8 @@ ExportedObj/
 *.pdb
 
 # Unity3D generated meta files
-*.pidb.meta
-*.meta
+# *.pidb.meta
+# *.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
