@@ -5,12 +5,13 @@
 Shader "Insideout" {
 Properties {
 	_MainTex ("Base (RGB)", 2D) = "white" {}
+
 }
 
 SubShader {
 	Tags { "RenderType"="Opaque" }
-	Cull front    // ADDED BY BERNIE, TO FLIP THE SURFACES
-	LOD 100
+	Cull Front    //This is used to print the texture inside of the sphere
+	
 	
 	Pass {  
 		CGPROGRAM
