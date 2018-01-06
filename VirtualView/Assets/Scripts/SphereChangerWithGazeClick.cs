@@ -22,21 +22,6 @@ public class SphereChangerWithGazeClick : MonoBehaviour {
 			Debug.LogWarning("No Fader object found on camera.");
 	}
 
-	void Update(){
-
-		MyTime += Time.deltaTime;
-		RadialProgress.GetComponent<Image>().fillAmount = MyTime/3;
-
-		if (MyTime >= 3f) {
-			ChangeSphere (nextSphere);
-		}
-	}
-		
-	public void Resetinator(){
-		MyTime = 0f;
-		RadialProgress.GetComponent<Image> ().fillAmount = 0f;
-	}
-
 	public void ChangeSphere(Transform nextSphere)
     {
 		StartCoroutine(FadeCamera(nextSphere));
@@ -71,7 +56,8 @@ public class SphereChangerWithGazeClick : MonoBehaviour {
         //While we are still visible, remove some of the alpha colour
         while (mat.color.a > 0.0f)
         {
-            mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, mat.color.a - (Time.deltaTime / time));
+            mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, mat.color.a 
+            	- (Time.deltaTime / time));
             yield return null;
         }
     }
@@ -81,8 +67,25 @@ public class SphereChangerWithGazeClick : MonoBehaviour {
         //While we aren't fully visible, add some of the alpha colour
         while (mat.color.a < 1.0f)
         {
-            mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, mat.color.a + (Time.deltaTime / time));
+            mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, mat.color.a 
+            	+ (Time.deltaTime / time));
             yield return null;
         }
     }
+
+    void Update()
+    {
+		MyTime += Time.deltaTime;
+		RadialProgress.GetComponent<Image>().fillAmount = MyTime/3;
+
+		if (MyTime >= 3f) {
+			ChangeSphere (nextSphere);
+		}
+	}
+		
+	public void Resetinator()
+	{
+		MyTime = 0f;
+		RadialProgress.GetComponent<Image> ().fillAmount = 0f;
+	}
 }
