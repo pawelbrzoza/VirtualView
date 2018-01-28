@@ -18,7 +18,6 @@ using UnityEngine.EventSystems;
 /// Draws a circular reticle in front of any object that the user points at.
 /// The circle dilates if the object is clickable.
 public class GvrReticlePointer : GvrBasePointer {
-
   /// The constants below are expsed for testing. Minimum inner angle of the reticle (in degrees).
   public const float RETICLE_MIN_INNER_ANGLE = 0.0f;
 
@@ -120,7 +119,6 @@ public class GvrReticlePointer : GvrBasePointer {
     MaterialComp.SetFloat("_InnerDiameter", ReticleInnerDiameter * ReticleDistanceInMeters);
     MaterialComp.SetFloat("_OuterDiameter", ReticleOuterDiameter * ReticleDistanceInMeters);
     MaterialComp.SetFloat("_DistanceInMeters", ReticleDistanceInMeters);
-	
   }
 
   void Awake() {
@@ -130,9 +128,9 @@ public class GvrReticlePointer : GvrBasePointer {
 
   protected override void Start() {
     base.Start();
-	
+
     Renderer rendererComponent = GetComponent<Renderer>();
-    rendererComponent.sortingOrder = reticleSortingOrder;
+    //rendererComponent.sortingOrder = reticleSortingOrder;
 
     MaterialComp = rendererComponent.material;
 
